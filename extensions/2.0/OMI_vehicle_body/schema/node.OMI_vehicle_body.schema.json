@@ -1,0 +1,45 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "node.OMI_vehicle_body.schema.json",
+    "title": "OMI_vehicle_body glTF Node Extension",
+    "type": "object",
+    "properties": {
+        "pilotSeat": {
+            "type": "number",
+            "description": "The index of the OMI_seat glTF node to use as the pilot seat / driver seat.",
+            "default": -1
+        },
+        "maximumSpeed": {
+            "type": "number",
+            "description": "If non-negative, the speed in meters per second at which the vehicle should stop driving acceleration further.",
+            "default": -1.0
+        },
+        "maximumSteeringAngle": {
+            "type": "number",
+            "description": "The maximum angle in radians that the vehicle can steer.",
+            "default": 0.5
+        },
+        "steeringAngle": {
+            "type": "number",
+            "description": "The angle in radians that the vehicle is currently steering.",
+            "default": 0.0
+        },
+        "throttleRatio": {
+            "type": "number",
+            "description": "The ratio of throttle to apply to the vehicle. If useThrottle is false, this value is ignored.",
+            "default": 0.0
+        },
+        "useThrottle": {
+            "type": "boolean",
+            "description": "If true, the vehicle should use a throttle for forward movement. If maximumSpeed is non-negative, the throttle should be a ratio of that speed, otherwise it should be a ratio of thrust power.",
+            "default": false
+        },
+        "inertiaDampeners": {
+            "type": "boolean",
+            "description": "If true, the vehicle should slow itself down when not given input.",
+            "default": false
+        },
+        "extensions": { },
+        "extras": { }
+    }
+}
