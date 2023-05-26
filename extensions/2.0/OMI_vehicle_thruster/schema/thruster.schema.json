@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "OMI_vehicle_thruster Thruster Parameters",
+    "type": "object",
+    "properties": {
+        "force": {
+            "type": "number",
+            "description": "The maximum thrust force in Newtons (kg⋅m/s²) that the thruster can provide. Required."
+        },
+        "gimbal": {
+            "type": "number",
+            "description": "The maximum angle the thruster can rotate in radians.",
+            "default": 0.0
+        },
+        "extensions": { },
+        "extras": { }
+    },
+    "required": [
+        "force"
+    ]
+}

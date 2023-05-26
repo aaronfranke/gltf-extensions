@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "OMI_vehicle_thruster glTF Node Extension",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "glTFProperty.schema.json"
+        }
+    ],
+    "properties": {
+        "thruster": {
+            "description": "The id of the thruster parameters referenced by this node.",
+            "allOf": [
+                {
+                    "$ref": "glTFid.schema.json"
+                }
+            ]
+        },
+        "extensions": {},
+        "extras": {}
+    },
+    "required": [
+        "thruster"
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "OMI_vehicle_wheel Wheel Parameters",
+    "type": "object",
+    "properties": {
+        "radius": {
+            "type": "number",
+            "description": "The radius of the wheel in meters. This is the radius of a circle in the local YZ plane.",
+            "default": 0.25
+        },
+        "suspensionStiffness": {
+            "type": "number",
+            "description": "The stiffness of the suspension, the resistance to moving up or down.",
+            "default": 40.0
+        },
+        "suspensionTravel": {
+            "type": "number",
+            "description": "The distance the suspension can move up or down in meters.",
+            "default": 0.25
+        },
+        "useForSteering": {
+            "type": "boolean",
+            "description": "If true, the wheel should rotate to help the vehicle steer.",
+            "default": true
+        },
+        "useForTraction": {
+            "type": "boolean",
+            "description": "If true, the wheel transfers the engine force to the ground to propel the vehicle in its desired direction.",
+            "default": true
+        },
+        "width": {
+            "type": "number",
+            "description": "The width of the wheel in meters. This is the width of the wheel in the local X axis.",
+            "default": 0.125
+        },
+        "extensions": { },
+        "extras": { }
+    }
+}

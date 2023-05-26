@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "title": "OMI_vehicle_wheel glTF Document Extension",
+    "type": "object",
+    "allOf": [
+        {
+            "$ref": "glTFProperty.schema.json"
+        }
+    ],
+    "properties": {
+        "wheels": {
+            "description": "An array of wheel parameters that can be referenced by nodes.",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "$ref": "wheel.schema.json"
+            },
+            "minItems": 1
+        },
+        "extensions": {},
+        "extras": {}
+    },
+    "required": [
+        "wheels"
+    ]
+}
