@@ -1,0 +1,35 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "glTF.OMI_physics_body.material.OMI_audio_material.schema.json",
+    "title": "OMI_audio_material glTF Physics Material Extension Audio Material",
+    "type": "object",
+    "description": "Physics material extension for audio properties, defining the acoustic behavior of the material.",
+    "allOf": [ { "$ref": "glTFProperty.schema.json" } ],
+    "properties": {
+        "damping": {
+            "type": "number",
+            "description": "",
+            "default": 0.5
+        },
+        "transmission": {
+            "type": "number",
+            "description": "",
+            "default": 0.5
+        },
+        "absorption": {
+            "type": "object",
+            "description": "A set of absorption coefficients for different sound frequencies. Keys represent frequencies (Hz), and values represent absorption coefficients between 0 and 1.",
+            "patternProperties": {
+                "^[0-9]+(\\.[0-9]+)?$": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                }
+            },
+            "additionalProperties": false,
+            "default": { }
+        },
+        "extensions": { },
+        "extras": { }
+    }
+}
