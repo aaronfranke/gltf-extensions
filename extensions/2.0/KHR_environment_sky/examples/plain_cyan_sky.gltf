@@ -1,0 +1,65 @@
+{
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 24,
+            "max": [0.5, 0.5, 0.5],
+            "min": [-0.5, -0.5, -0.5],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 24,
+            "max": [1.0, 1.0, 1.0],
+            "min": [-1.0, -1.0, -1.0],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5121,
+            "count": 36,
+            "max": [23],
+            "min": [0],
+            "type": "SCALAR"
+        }
+    ],
+    "asset": {
+        "version": "2.0"
+    },
+    "bufferViews": [
+        { "buffer": 0, "byteLength": 288, "byteStride": 12, "target": 34962 },
+        { "buffer": 0, "byteLength": 288, "byteOffset": 288, "byteStride": 12, "target": 34962 },
+        { "buffer": 0, "byteLength": 36, "byteOffset": 576, "target": 34963 }
+    ],
+    "buffers": [{ "byteLength": 612, "uri": "cube_mesh_data.bin" }],
+    "extensions": {
+        "KHR_environment_sky": {
+            "skies": [
+                {
+                    "ambientSkyContribution": 0.1,
+                    "plain": { "color": [0.5, 1.0, 1.0] },
+                    "type": "plain"
+                }
+            ]
+        }
+    },
+    "extensionsUsed": ["KHR_environment_sky"],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": { "NORMAL": 1, "POSITION": 0 },
+                    "indices": 2
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        { "children": [1], "name": "PlainCyanSky" },
+        { "mesh": 0, "name": "Box" }
+    ],
+    "scene": 0,
+    "scenes": [{ "nodes": [0] }]
+}
